@@ -15,7 +15,7 @@ It was published after the release that GitHub's `releases/latest` endpoint stil
 
 TrueCode targets OpenCode tag `v2.2.7` at commit `fedc6f208aa2bd54c1019227214568083f6380ad`.
 
-The immutable OpenAPI source and OpenCode MIT license are checked into `provenance/opencode-v2.2.7/` with hashes recorded in `PROVENANCE.md`.
+The immutable OpenAPI source and OpenCode MIT license are checked into `provenance/opencode-v2.2.7/` with hashes recorded in `provenance/README.md`.
 Implementation and conformance work must use this tag, commit, and official artifact digests.
 
 Later OpenCode releases do not change this target automatically.

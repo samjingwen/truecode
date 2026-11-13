@@ -24,7 +24,7 @@ Local exact-head verification, independent Hardlook review, protected pull reque
 ### Exit criteria
 
 - The documentation consistently names OpenCode `v2.2.7` and commit `fedc6f208aa2bd54c1019227214568083f6380ad`.
-- The preserved OpenAPI and license hashes match `PROVENANCE.md`.
+- The preserved OpenAPI and license hashes match `provenance/README.md`.
 - The API inventory reproducibly reports 139 paths, 170 operations, and 497 schemas.
 - Intentional exclusions are explicit.
 - No Rust runtime implementation has been added.

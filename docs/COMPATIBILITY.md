@@ -9,7 +9,7 @@ It also records intentional compatibility breaks and prevents broad claims based
 
 The sole compatibility target for the first release is OpenCode `v2.2.7` at commit `fedc6f208aa2bd54c1019227214568083f6380ad`.
 The target does not move when OpenCode changes.
-See [../PROVENANCE.md](../PROVENANCE.md) for provenance and hashes.
+See the [provenance record](../provenance/README.md) for provenance and hashes.
 
 ## Compatibility dimensions
 

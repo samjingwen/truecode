@@ -20,7 +20,7 @@ The frozen OpenAPI document contains:
 - 170 HTTP operations
 - 497 component schemas
 
-See [PROVENANCE.md](PROVENANCE.md) for source provenance, hashes, and the freeze policy.
+See [provenance](provenance/) for source provenance, hashes, and the freeze policy.
 
 ## Scope
 
@@ -63,7 +63,7 @@ The project describes its goal as full server and functional runtime parity, not
 
 ## Repository guide
 
-- [PROVENANCE.md](PROVENANCE.md) records the frozen reference provenance.
+- [provenance](provenance/) records the frozen reference provenance.
 - [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md) defines parity and compatibility breaks.
 - [docs/API_INVENTORY.md](docs/API_INVENTORY.md) inventories the frozen HTTP contract.
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) defines the planned Rust workspace and dependency boundaries.
