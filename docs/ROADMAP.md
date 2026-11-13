@@ -24,7 +24,7 @@ Local exact-head verification, independent Hardlook review, protected pull reque
 ### Exit criteria
 
 - The documentation consistently names OpenCode `v2.2.7` and commit `fedc6f208aa2bd54c1019227214568083f6380ad`.
-- The preserved OpenAPI and license hashes match `UPSTREAM.md`.
+- The preserved OpenAPI and license hashes match `PROVENANCE.md`.
 - The API inventory reproducibly reports 139 paths, 170 operations, and 497 schemas.
 - Intentional exclusions are explicit.
 - No Rust runtime implementation has been added.
@@ -35,14 +35,14 @@ Local exact-head verification, independent Hardlook review, protected pull reque
 ### Deliverables
 
 - Verified official artifacts in ignored disposable storage
-- Process supervisor for frozen upstream and candidate binaries
+- Process supervisor for frozen reference and candidate binaries
 - Disposable namespace builder
 - HTTP, SSE, and WebSocket transcript recorder
 - Schema-derived route and operation manifest
 - Deterministic provider, OAuth, MCP, repository, tool, Git, and PTY fixtures
 - Explicit canonicalization rules and tests
 - Initial official-client launch and endpoint-selection probes
-- Upstream behavior reports for service, session, event, error, cancellation, and recovery scenarios
+- Reference behavior reports for service, session, event, error, cancellation, and recovery scenarios
 
 ### Exit criteria
 

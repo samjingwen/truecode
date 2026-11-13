@@ -1,4 +1,4 @@
-# Frozen upstream reference
+# Frozen reference provenance
 
 ## Selected release
 
@@ -13,7 +13,7 @@ TrueCode targets the following immutable OpenCode release:
 | Commit time | `2026-11-10T07:52:42Z` |
 | Published time | `2026-11-10T10:37:15Z` |
 | Project kickoff | `2026-11-13` |
-| Upstream license | MIT |
+| Source license | MIT |
 
 GitHub's `releases/latest` endpoint still identified `v1.19.5` at kickoff.
 That marker was not used because `v2.2.7` was a later published, non-draft, non-prerelease OpenCode product release.
@@ -21,14 +21,14 @@ Tags for separately released monorepo packages, such as `process-daemon-*`, were
 
 ## Exact source evidence
 
-The following upstream files are preserved without modification:
+The following source-evidence files are preserved without modification:
 
 | File | SHA-256 |
 | --- | --- |
-| `upstream/opencode-v2.2.7/openapi.json` | `a2c9b373ac1e5bb0c8658cb4a9dc5db465e750c3c9e92a7234db65621a71bcd8` |
-| `upstream/opencode-v2.2.7/LICENSE` | `625f0f619133f89bbbb2abe37369613dfa1885eba1e50d02170deb62bb42cb6b` |
+| `provenance/opencode-v2.2.7/openapi.json` | `a2c9b373ac1e5bb0c8658cb4a9dc5db465e750c3c9e92a7234db65621a71bcd8` |
+| `provenance/opencode-v2.2.7/LICENSE` | `625f0f619133f89bbbb2abe37369613dfa1885eba1e50d02170deb62bb42cb6b` |
 
-The OpenAPI source path in the upstream repository is `packages/protocol/openapi.json`.
+The OpenAPI source path in the OpenCode repository is `packages/protocol/openapi.json`.
 Its package version is `2.2.7`.
 
 ## Contract inventory
@@ -42,7 +42,7 @@ The frozen OpenAPI document declares:
 
 The document describes itself as an experimental surface for selected instance routes.
 It is necessary source evidence, but it is not sufficient proof of runtime parity.
-Observed behavior, upstream tests, streaming transcripts, error behavior, and unchanged official-client operation are also required.
+Observed behavior, OpenCode tests, streaming transcripts, error behavior, and unchanged official-client operation are also required.
 
 The earlier `v2.1.4` planning snapshot contained 124 paths, 149 operations, and 293 schemas.
 Those numbers are historical context only and are not TrueCode's target contract.
@@ -63,12 +63,12 @@ They must not read a developer's normal OpenCode or TrueCode state.
 
 ## Freeze policy
 
-The target does not move when upstream publishes another release.
+The target does not move when OpenCode publishes another release.
 Changing the target requires a new ADR, a new immutable source snapshot, a regenerated inventory, and a new conformance baseline.
 Compatibility work for another release must not silently alter claims for `v2.2.7`.
 
 ## Attribution
 
 OpenCode is Copyright (c) 2025 opencode and is licensed under the MIT License.
-The preserved license text remains authoritative for copied upstream material.
+The preserved license text remains authoritative for copied OpenCode material.
 TrueCode's own source is separately covered by the repository root `LICENSE`.

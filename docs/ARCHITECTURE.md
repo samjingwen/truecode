@@ -17,7 +17,7 @@ Long-running resources have an explicit owner and cancellation path.
 Detached background tasks are prohibited unless their lifecycle and shutdown behavior are documented and tested.
 
 The service exposes readiness only after configuration, storage, migrations, runtime recovery, and listener setup have succeeded.
-Graceful shutdown stops admission, cancels or drains work according to the observed upstream contract, closes streams, terminates owned processes, checkpoints durable state, and then exits.
+Graceful shutdown stops admission, cancels or drains work according to the observed reference contract, closes streams, terminates owned processes, checkpoints durable state, and then exits.
 
 ## Planned workspace
 
@@ -34,7 +34,7 @@ Graceful shutdown stops admission, cancels or drains work according to the obser
 | `truecode-plugins-host` | Wasmtime component host, capability enforcement, resource limits, version negotiation, and plugin lifecycle. |
 | `truecode-plugins-sdk` | Rust SDK, WIT bindings, manifest types, test host, and plugin authoring support. |
 | `truecode-service-cli` | `truecode` binary, daemon lifecycle, configuration locations, status, diagnostics, implementation identity, and local administration. |
-| `truecode-conformance` | Upstream and candidate launchers, deterministic fixtures, transcript capture, canonicalization, comparison, and reports. |
+| `truecode-conformance` | Reference and candidate launchers, deterministic fixtures, transcript capture, canonicalization, comparison, and reports. |
 
 Crate names describe boundaries rather than requiring one package per concept from the first commit.
 Splitting or combining crates requires preserving the dependency rules below.
@@ -71,7 +71,7 @@ A compatibility-sensitive mutation follows this sequence:
 6. The runtime publishes committed events in sequence order.
 7. The handler produces the contract response.
 
-The exact relationship between response completion and event publication must match the frozen upstream behavior for each affected operation.
+The exact relationship between response completion and event publication must match the frozen reference behavior for each affected operation.
 The durable outbox principle prevents clients from observing events for transitions that were not committed.
 
 ## Runtime ownership
@@ -98,7 +98,7 @@ Axum and Tower are the planned server stack.
 Streaming responses must avoid proxy and middleware buffering that changes frame timing.
 Slow clients must encounter a defined backpressure or disconnect policy rather than causing unbounded event retention.
 
-SSE connections use durable event sequence information where the upstream contract exposes replay or cursor behavior.
+SSE connections use durable event sequence information where the reference contract exposes replay or cursor behavior.
 Ephemeral events that cannot be replayed must have explicitly tested reconnect semantics.
 
 WebSocket tasks must coordinate reader, writer, heartbeat, shutdown, and peer closure without orphaning tasks.
@@ -155,7 +155,7 @@ The plugin component interface is independent from OpenCode's JavaScript and Typ
 
 ## Configuration and locations
 
-Configuration is layered deterministically from service arguments, approved environment overrides, user configuration, project configuration, and discovered instruction or skill files according to characterized upstream precedence.
+Configuration is layered deterministically from service arguments, approved environment overrides, user configuration, project configuration, and discovered instruction or skill files according to characterized reference precedence.
 Unknown fields fail by default unless compatibility evidence requires tolerant handling at a specific layer.
 
 Tests always override config, data, cache, home, repository, socket, and credential locations into a disposable namespace.

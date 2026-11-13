@@ -28,7 +28,7 @@ Each native report records:
 - libc and dynamic-linker details on Linux
 - Git and default shell versions
 - SQLite runtime version
-- Conformance fixture and upstream artifact digests
+- Conformance fixture and reference artifact digests
 - Tests run, results, skips, and limitations
 
 macOS results do not establish Linux behavior.
@@ -56,7 +56,7 @@ Code cannot assume macOS's common default filesystem behavior is shared by Linux
 macOS service integration and Linux service integration use platform-specific adapters behind one service CLI contract.
 Installation, startup, readiness, status, logs, shutdown, restart, stale ownership, and uninstall require native tests.
 
-The exact macOS launchd and Linux systemd packaging behavior requires dedicated ADRs after the frozen upstream lifecycle inventory is complete.
+The exact macOS launchd and Linux systemd packaging behavior requires dedicated ADRs after the frozen reference lifecycle inventory is complete.
 
 ### Credential storage
 

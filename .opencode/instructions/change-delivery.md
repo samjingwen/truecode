@@ -31,8 +31,8 @@ The absence of remote checks does not waive executable quality checks, independe
 
 ## Preserve source evidence and private state
 
-- Target only the frozen OpenCode release named in `UPSTREAM.md` unless a superseding ADR explicitly changes it.
-- Treat `upstream/opencode-v2.2.7/openapi.json` and its preserved license as immutable source evidence.
+- Target only the frozen OpenCode release named in `PROVENANCE.md` unless a superseding ADR explicitly changes it.
+- Treat `provenance/opencode-v2.2.7/openapi.json` and its preserved license as immutable source evidence.
 - Regenerate derived protocol artifacts with their owning tool and source hash rather than editing generated output.
 - Never manually edit `CHANGELOG.md` or files marked as generated.
 - Never inspect, import, migrate, attach, or modify old OpenCode or TrueCode databases, sessions, retained data, caches, or credentials.

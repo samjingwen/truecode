@@ -2,7 +2,7 @@
 
 ## Source
 
-This inventory is derived from `upstream/opencode-v2.2.7/openapi.json`.
+This inventory is derived from `provenance/opencode-v2.2.7/openapi.json`.
 The immutable source came from `packages/protocol/openapi.json` in OpenCode `v2.2.7` at commit `fedc6f208aa2bd54c1019227214568083f6380ad`.
 
 The source hash is `a2c9b373ac1e5bb0c8658cb4a9dc5db465e750c3c9e92a7234db65621a71bcd8`.
@@ -94,7 +94,7 @@ jq '{
       )
   ] | length),
   schemas: (.components.schemas | length)
-}' upstream/opencode-v2.2.7/openapi.json
+}' provenance/opencode-v2.2.7/openapi.json
 ```
 
 ## Derived artifacts

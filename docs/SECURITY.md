@@ -211,7 +211,7 @@ Diagnostic bundles enumerate included material before creation and require expli
 Direct dependencies are pinned through Cargo's lockfile for released applications.
 New major dependencies require architecture review covering maintenance, vulnerabilities, transitive surface, build scripts, native code, and platform support.
 
-Upstream OpenCode artifacts are verified against recorded SHA-256 digests.
+Official OpenCode artifacts are verified against recorded SHA-256 digests.
 Plugin component identity is digest-based.
 Release artifacts are built from a clean merged revision and associated with their source commit.
 
