@@ -106,3 +106,8 @@ These instructions apply to the repository root and every directory below it.
 - Keep commands, paths, target triples, version pins, and compatibility claims consistent across documents.
 - Mark hypotheses and unresolved behavior explicitly.
 - Link claims about the frozen contract to checked-in source evidence or reproducible inventory commands.
+
+## Delivery
+
+Follow `.opencode/instructions/change-delivery.md` for Worktrunk isolation, exact-head local verification, Hardlook review, pull requests, protected merge, and safe primary-checkout synchronization.
+Do not bypass protected `master`, invent hosted checks, or claim verification that was not actually run.
