@@ -15,14 +15,14 @@ It was published after the release that GitHub's `releases/latest` endpoint stil
 
 TrueCode targets OpenCode tag `v2.2.7` at commit `fedc6f208aa2bd54c1019227214568083f6380ad`.
 
-The immutable OpenAPI source and upstream MIT license are checked into `upstream/opencode-v2.2.7/` with hashes recorded in `UPSTREAM.md`.
+The immutable OpenAPI source and OpenCode MIT license are checked into `provenance/opencode-v2.2.7/` with hashes recorded in `PROVENANCE.md`.
 Implementation and conformance work must use this tag, commit, and official artifact digests.
 
-Later upstream releases do not change this target automatically.
+Later OpenCode releases do not change this target automatically.
 
 ## Consequences
 
 TrueCode can make reproducible compatibility claims against one defined contract.
-New upstream behavior remains out of scope until a separate upgrade effort is approved.
+New OpenCode behavior remains out of scope until a separate upgrade effort is approved.
 
 Changing the target requires a superseding ADR, a new source snapshot, a regenerated inventory, updated official artifacts, and a complete conformance reassessment.

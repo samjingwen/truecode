@@ -16,13 +16,13 @@ These instructions apply to the repository root and every directory below it.
 - Keep implementation changes separate from documentation review unless the user explicitly expands the task.
 - Treat unresolved behavior as an inventory or conformance question rather than silently choosing an implementation.
 
-## Frozen upstream reference
+## Frozen reference provenance
 
 - Target OpenCode `v2.2.7` at commit `fedc6f208aa2bd54c1019227214568083f6380ad`.
 - Do not chase the OpenCode development branch or silently update the target release.
-- Treat `upstream/opencode-v2.2.7/openapi.json` as immutable generated source evidence.
+- Treat `provenance/opencode-v2.2.7/openapi.json` as immutable generated source evidence.
 - Regenerate derived protocol code and manifests with their owning tools rather than editing generated output.
-- Preserve the upstream MIT license and attribution.
+- Preserve the OpenCode MIT license and attribution.
 
 ## Compatibility scope
 
@@ -59,7 +59,7 @@ These instructions apply to the repository root and every directory below it.
 ## Protocol and conformance standards
 
 - Build the differential conformance harness before broad runtime implementation.
-- Drive identical deterministic scenarios against the frozen upstream binary and TrueCode.
+- Drive identical deterministic scenarios against the frozen reference binary and TrueCode.
 - Compare status codes, headers, response bodies, SSE frames, event order, errors, cancellation, reconnects, and recovery.
 - Canonicalize only proven nondeterministic values such as temporary paths, ports, timestamps, and generated identifiers.
 - Never canonicalize event order, missing fields, error categories, or state transitions to hide incompatibility.
@@ -79,7 +79,7 @@ These instructions apply to the repository root and every directory below it.
 ## Engineering standards
 
 - Use stable Rust and pin the toolchain before implementation begins.
-- Keep configuration strict and fail on unknown fields unless upstream compatibility requires otherwise.
+- Keep configuration strict and fail on unknown fields unless reference compatibility requires otherwise.
 - Keep production queues and caches bounded and observable.
 - Avoid `unsafe` Rust unless a platform boundary requires it.
 - Isolate approved `unsafe` code, document its invariants with `SAFETY` comments, and cover the boundary with focused tests.

@@ -9,7 +9,7 @@ The harness must exist before broad runtime implementation so behavior is discov
 
 ## Reference and candidate
 
-The reference is an official OpenCode `v2.2.7` artifact whose digest appears in [../UPSTREAM.md](../UPSTREAM.md).
+The reference is an official OpenCode `v2.2.7` artifact whose digest appears in [../PROVENANCE.md](../PROVENANCE.md).
 The candidate is an exact locally built TrueCode commit.
 
 Each process runs with:

@@ -20,7 +20,7 @@ The frozen OpenAPI document contains:
 - 170 HTTP operations
 - 497 component schemas
 
-See [UPSTREAM.md](UPSTREAM.md) for provenance, hashes, and the freeze policy.
+See [PROVENANCE.md](PROVENANCE.md) for source provenance, hashes, and the freeze policy.
 
 ## Scope
 
@@ -52,7 +52,7 @@ The project describes its goal as full server and functional runtime parity, not
 
 ## Design principles
 
-1. Freeze one upstream release and do not chase its development branch.
+1. Freeze one OpenCode reference release and do not chase its development branch.
 2. Build a differential conformance harness before building the runtime.
 3. Treat observable behavior as the contract, not route stubs alone.
 4. Persist state transitions before publishing externally visible events.
@@ -63,7 +63,7 @@ The project describes its goal as full server and functional runtime parity, not
 
 ## Repository guide
 
-- [UPSTREAM.md](UPSTREAM.md) records the frozen upstream reference.
+- [PROVENANCE.md](PROVENANCE.md) records the frozen reference provenance.
 - [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md) defines parity and compatibility breaks.
 - [docs/API_INVENTORY.md](docs/API_INVENTORY.md) inventories the frozen HTTP contract.
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) defines the planned Rust workspace and dependency boundaries.
@@ -85,4 +85,4 @@ Native release verification is required on macOS ARM64 and Linux AArch64 before 
 ## License
 
 TrueCode is licensed under the [MIT License](LICENSE).
-The frozen OpenCode materials retain their original MIT notice under `upstream/opencode-v2.2.7/`.
+The frozen OpenCode materials retain their original MIT notice under `provenance/opencode-v2.2.7/`.

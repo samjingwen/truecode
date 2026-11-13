@@ -72,7 +72,7 @@ It does not require all external work to run while holding a mutex or database t
 Long work records durable intent, releases storage locks, and later applies a completion transition if the run still owns that work.
 
 Idempotency behavior is characterized per endpoint.
-Where the upstream API provides no idempotency key, TrueCode must still prevent duplicated internal completion after reconnect or retry.
+Where the reference API provides no idempotency key, TrueCode must still prevent duplicated internal completion after reconnect or retry.
 
 ## Durable transition and event ordering
 
@@ -130,7 +130,7 @@ Mutating tools use explicit conflict rules for filesystem paths, Git repositorie
 ## Permissions and forms
 
 Pending permissions and forms are created durably before clients are notified.
-Replies are accepted once according to the characterized upstream conflict behavior.
+Replies are accepted once according to the characterized reference conflict behavior.
 
 The runtime must define behavior for:
 
@@ -188,7 +188,7 @@ Possible recovery actions are:
 - Complete cancellation that was committed before shutdown.
 
 Provider generation cannot generally resume from an arbitrary stream offset.
-Retries after interruption must avoid duplicating committed tool side effects and must follow observed upstream behavior.
+Retries after interruption must avoid duplicating committed tool side effects and must follow observed reference behavior.
 
 Recovery decisions are deterministic from durable state plus verified live-resource identity.
 Every decision emits auditable diagnostics without exposing secrets.

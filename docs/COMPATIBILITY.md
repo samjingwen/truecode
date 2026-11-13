@@ -8,8 +8,8 @@ It also records intentional compatibility breaks and prevents broad claims based
 ## Reference
 
 The sole compatibility target for the first release is OpenCode `v2.2.7` at commit `fedc6f208aa2bd54c1019227214568083f6380ad`.
-The target does not move when upstream changes.
-See [../UPSTREAM.md](../UPSTREAM.md) for provenance and hashes.
+The target does not move when OpenCode changes.
+See [../PROVENANCE.md](../PROVENANCE.md) for provenance and hashes.
 
 ## Compatibility dimensions
 
@@ -116,7 +116,7 @@ Compatibility decisions use the following evidence together:
 
 1. The immutable OpenAPI document and generated official client contracts.
 2. Observable behavior from the frozen official release in disposable namespaces.
-3. Upstream tests and pinned source behavior.
+3. OpenCode tests and pinned source behavior.
 4. Unchanged official-client behavior.
 5. Explicit release documentation.
 

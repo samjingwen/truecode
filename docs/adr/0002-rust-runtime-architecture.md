@@ -26,7 +26,7 @@ Major dependency selection remains subject to focused dependency decisions befor
 
 ## Consequences
 
-The architecture favors explicit ownership and recoverability over direct translation of upstream TypeScript structure.
+The architecture favors explicit ownership and recoverability over direct translation of the reference TypeScript structure.
 The internal implementation may differ while wire and behavioral results remain compatible.
 
 Some platform code may require carefully isolated `unsafe` Rust.
